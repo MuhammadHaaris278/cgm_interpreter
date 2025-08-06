@@ -1,126 +1,111 @@
 from typing import List, Dict, Any
-from datetime import datetime, timedelta
+from datetime import datetime
 from app.models.cgm_point import CGMPoint
+from app.utils.datetime_tools import is_nocturnal, is_dawn_window
 
-HYPO_THRESHOLD = 70
-SEVERE_HYPO = 54
-HYPER_THRESHOLD = 250
-SPIKE_DELTA = 30
-DAWN_WINDOW = (2, 8)  # 2am–8am
-NOCTURNAL_WINDOW = (22, 6)
+def is_postprandial(dt: datetime) -> bool:
+    """Postprandial window: 6 AM to 10 PM."""
+    return 6 <= dt.hour <= 22
 
-def detect_hypo_events(readings: List[CGMPoint]) -> List[Dict[str, Any]]:
-    events = []
-    current_event = []
 
-    for point in readings:
-        if point.glucose < HYPO_THRESHOLD:
-            current_event.append(point)
+def _group_hypo_episodes(events: List[Dict], min_gap_minutes: int = 30) -> List[Dict]:
+    """Group consecutive low-glucose readings into discrete episodes."""
+    if not events:
+        return []
+
+    grouped = []
+    current_group = [events[0]]
+
+    for i in range(1, len(events)):
+        prev = datetime.fromisoformat(events[i - 1]["timestamp"])
+        curr = datetime.fromisoformat(events[i]["timestamp"])
+        gap = (curr - prev).total_seconds() / 60.0
+
+        if gap <= min_gap_minutes:
+            current_group.append(events[i])
         else:
-            if len(current_event) >= 3:  # ≥15 min = 3 readings
-                events.append({
-                    "start": current_event[0].timestamp.isoformat(),
-                    "end": current_event[-1].timestamp.isoformat(),
-                    "min_glucose": min(p.glucose for p in current_event),
-                    "count": len(current_event)
-                })
-            current_event = []
+            grouped.append(current_group)
+            current_group = [events[i]]
 
-    # Handle trailing event
-    if len(current_event) >= 3:
-        events.append({
-            "start": current_event[0].timestamp.isoformat(),
-            "end": current_event[-1].timestamp.isoformat(),
-            "min_glucose": min(p.glucose for p in current_event),
-            "count": len(current_event)
+    grouped.append(current_group)
+
+    episodes = []
+    for group in grouped:
+        times = [datetime.fromisoformat(r["timestamp"]) for r in group]
+        values = [r["glucose"] for r in group]
+        episodes.append({
+            "start": min(times).isoformat(),
+            "end": max(times).isoformat(),
+            "min_glucose": min(values),
+            "count": len(group)
         })
 
-    return events
+    return episodes
 
-def detect_nocturnal_hypoglycemia(events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    nocturnal_events = []
-    for e in events:
-        start_time = datetime.fromisoformat(e["start"])
-        if (start_time.hour >= NOCTURNAL_WINDOW[0]) or (start_time.hour < NOCTURNAL_WINDOW[1]):
-            nocturnal_events.append(e)
-    return nocturnal_events
-
-def detect_hyper_events(readings: List[CGMPoint]) -> List[Dict[str, Any]]:
-    events = []
-    current_event = []
-
-    for point in readings:
-        if point.glucose > HYPER_THRESHOLD:
-            current_event.append(point)
-        else:
-            if len(current_event) >= 3:
-                events.append({
-                    "start": current_event[0].timestamp.isoformat(),
-                    "end": current_event[-1].timestamp.isoformat(),
-                    "max_glucose": max(p.glucose for p in current_event),
-                    "count": len(current_event)
-                })
-            current_event = []
-
-    if len(current_event) >= 3:
-        events.append({
-            "start": current_event[0].timestamp.isoformat(),
-            "end": current_event[-1].timestamp.isoformat(),
-            "max_glucose": max(p.glucose for p in current_event),
-            "count": len(current_event)
-        })
-
-    return events
-
-def detect_dawn_phenomenon(readings: List[CGMPoint]) -> bool:
-    """
-    Detects a rise of ≥20 mg/dL from nadir in 2–6am to peak in 6–8am window
-    """
-    nadir = None
-    rise = None
-
-    overnight = [r for r in readings if 2 <= r.timestamp.hour < 6]
-    morning = [r for r in readings if 6 <= r.timestamp.hour < 8]
-
-    if not overnight or not morning:
-        return False
-
-    nadir_val = min(r.glucose for r in overnight)
-    peak_val = max(r.glucose for r in morning)
-
-    if (peak_val - nadir_val) >= 20:
-        return True
-    return False
-
-def detect_postprandial_spikes(readings: List[CGMPoint]) -> List[Dict[str, Any]]:
-    """
-    Identifies glucose rises of ≥30 mg/dL over any 60–90 min window
-    """
-    spikes = []
-    for i in range(len(readings) - 6):  # 6 x 5min = 30min minimum window
-        start = readings[i]
-        for j in range(i+6, min(i+18, len(readings))):  # Up to 90 mins ahead
-            end = readings[j]
-            if (end.glucose - start.glucose) >= SPIKE_DELTA:
-                spikes.append({
-                    "start": start.timestamp.isoformat(),
-                    "end": end.timestamp.isoformat(),
-                    "delta": round(end.glucose - start.glucose, 2)
-                })
-                break  # Only count first spike in that window
-    return spikes
 
 def detect_all_patterns(readings: List[CGMPoint]) -> Dict[str, Any]:
-    hypo_events = detect_hypo_events(readings)
-    hyper_events = detect_hyper_events(readings)
-    nocturnal_hypo = detect_nocturnal_hypoglycemia(hypo_events)
-    dawn_present = detect_dawn_phenomenon(readings)
-    spikes = detect_postprandial_spikes(readings)
+    readings = sorted(readings, key=lambda x: x.timestamp)
+
+    hypo = []
+    nocturnal_hypo = []
+    hyper = []
+    spikes = []
+    spike_tracker = set()
+
+    for r in readings:
+        if r.glucose < 70:
+            hypo.append({
+                "timestamp": r.timestamp.isoformat(),
+                "glucose": r.glucose
+            })
+            if is_nocturnal(r.timestamp):
+                nocturnal_hypo.append({
+                    "timestamp": r.timestamp.isoformat(),
+                    "glucose": r.glucose
+                })
+
+        elif r.glucose > 180:
+            hyper.append({
+                "timestamp": r.timestamp.isoformat(),
+                "glucose": r.glucose
+            })
+
+    # Improved postprandial spike detection
+    for i in range(len(readings) - 12):  # ~60 minutes apart
+        start = readings[i]
+        end = readings[i + 12]
+        delta = end.glucose - start.glucose
+
+        if not is_postprandial(start.timestamp):
+            continue
+
+        if delta >= 40:  # tighter, more specific spike definition
+            rounded_time = start.timestamp.replace(minute=0, second=0)
+            if rounded_time in spike_tracker:
+                continue
+            spike_tracker.add(rounded_time)
+
+            spikes.append({
+                "start": start.timestamp.isoformat(),
+                "end": end.timestamp.isoformat(),
+                "delta": round(delta, 2)
+            })
+
+    # Dawn phenomenon detection: multiple rising events between 2–8 AM
+    dawn_rise_count = 0
+    for i in range(1, len(readings)):
+        prev = readings[i - 1]
+        curr = readings[i]
+        if is_dawn_window(prev.timestamp) and is_dawn_window(curr.timestamp):
+            if curr.glucose - prev.glucose >= 20:
+                dawn_rise_count += 1
+    dawn_present = dawn_rise_count >= 3
 
     return {
-        "hypoglycemia_events": hypo_events,
+        "hypoglycemia_events": hypo,
         "nocturnal_hypoglycemia_events": nocturnal_hypo,
-        "hyperglycemia_events": hyper_events,
-        "dawn_phenomenon": dawn_present,
-        "postprandial_spikes": spikes
+        "nocturnal_hypoglycemia_episodes": _group_hypo_episodes(nocturnal_hypo),
+        "hyperglycemia_events": hyper,
+        "postprandial_spikes": spikes,
+        "dawn_phenomenon": dawn_present
     }

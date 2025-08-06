@@ -1,0 +1,446 @@
+{
+  "interpretation_id": "d75568de-6612-4ab3-b5d7-d4c535b80fab",
+  "timestamp": "2025-08-06T12:04:56.070541",
+  "patient_id": "1",
+  "provider_id": "1",
+  "editable": true,
+  "finalized": false,
+  "summary": {
+    "metrics": {
+      "mean_glucose": 158.23,
+      "std_glucose": 78.57,
+      "cv": 49.66,
+      "gmi": 7.09,
+      "tir_percent": 44.88,
+      "below_70_percent": 16.54,
+      "below_54_percent": 0.0,
+      "above_180_percent": 38.58,
+      "above_250_percent": 15.75,
+      "tir_count": 57,
+      "below_70_count": 21,
+      "below_54_count": 0,
+      "above_180_count": 49,
+      "above_250_count": 20,
+      "total_points": 127
+    },
+    "patterns": {
+      "hypoglycemia_events": [
+        {
+          "timestamp": "2025-08-01T00:45:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-01T00:50:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-01T00:55:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-01T01:00:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-01T01:05:00+00:00",
+          "glucose": 60.0
+        },
+        {
+          "timestamp": "2025-08-01T01:10:00+00:00",
+          "glucose": 65.0
+        },
+        {
+          "timestamp": "2025-08-01T22:20:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-01T22:25:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-01T22:30:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-01T22:35:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-01T22:40:00+00:00",
+          "glucose": 60.0
+        },
+        {
+          "timestamp": "2025-08-02T00:30:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-02T00:35:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-02T00:40:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-02T00:45:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-02T00:50:00+00:00",
+          "glucose": 60.0
+        },
+        {
+          "timestamp": "2025-08-02T22:30:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-02T22:35:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-02T22:40:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-02T22:45:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-02T22:50:00+00:00",
+          "glucose": 60.0
+        }
+      ],
+      "nocturnal_hypoglycemia_events": [
+        {
+          "timestamp": "2025-08-01T00:45:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-01T00:50:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-01T00:55:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-01T01:00:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-01T01:05:00+00:00",
+          "glucose": 60.0
+        },
+        {
+          "timestamp": "2025-08-01T01:10:00+00:00",
+          "glucose": 65.0
+        },
+        {
+          "timestamp": "2025-08-01T22:20:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-01T22:25:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-01T22:30:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-01T22:35:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-01T22:40:00+00:00",
+          "glucose": 60.0
+        },
+        {
+          "timestamp": "2025-08-02T00:30:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-02T00:35:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-02T00:40:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-02T00:45:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-02T00:50:00+00:00",
+          "glucose": 60.0
+        },
+        {
+          "timestamp": "2025-08-02T22:30:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-02T22:35:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-02T22:40:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-02T22:45:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-02T22:50:00+00:00",
+          "glucose": 60.0
+        }
+      ],
+      "nocturnal_hypoglycemia_episodes": [
+        {
+          "start": "2025-08-01T00:45:00+00:00",
+          "end": "2025-08-01T01:10:00+00:00",
+          "min_glucose": 55.0,
+          "count": 6
+        },
+        {
+          "start": "2025-08-01T22:20:00+00:00",
+          "end": "2025-08-01T22:40:00+00:00",
+          "min_glucose": 55.0,
+          "count": 5
+        },
+        {
+          "start": "2025-08-02T00:30:00+00:00",
+          "end": "2025-08-02T00:50:00+00:00",
+          "min_glucose": 55.0,
+          "count": 5
+        },
+        {
+          "start": "2025-08-02T22:30:00+00:00",
+          "end": "2025-08-02T22:50:00+00:00",
+          "min_glucose": 55.0,
+          "count": 5
+        }
+      ],
+      "hyperglycemia_events": [
+        {
+          "timestamp": "2025-08-01T03:45:00+00:00",
+          "glucose": 190.0
+        },
+        {
+          "timestamp": "2025-08-01T03:50:00+00:00",
+          "glucose": 200.0
+        },
+        {
+          "timestamp": "2025-08-01T03:55:00+00:00",
+          "glucose": 210.0
+        },
+        {
+          "timestamp": "2025-08-01T04:00:00+00:00",
+          "glucose": 220.0
+        },
+        {
+          "timestamp": "2025-08-01T07:00:00+00:00",
+          "glucose": 230.0
+        },
+        {
+          "timestamp": "2025-08-01T07:05:00+00:00",
+          "glucose": 240.0
+        },
+        {
+          "timestamp": "2025-08-01T07:10:00+00:00",
+          "glucose": 250.0
+        },
+        {
+          "timestamp": "2025-08-01T07:15:00+00:00",
+          "glucose": 260.0
+        },
+        {
+          "timestamp": "2025-08-01T07:20:00+00:00",
+          "glucose": 270.0
+        },
+        {
+          "timestamp": "2025-08-01T07:25:00+00:00",
+          "glucose": 280.0
+        },
+        {
+          "timestamp": "2025-08-01T07:30:00+00:00",
+          "glucose": 290.0
+        },
+        {
+          "timestamp": "2025-08-01T08:00:00+00:00",
+          "glucose": 300.0
+        },
+        {
+          "timestamp": "2025-08-01T08:05:00+00:00",
+          "glucose": 295.0
+        },
+        {
+          "timestamp": "2025-08-01T12:20:00+00:00",
+          "glucose": 190.0
+        },
+        {
+          "timestamp": "2025-08-01T12:25:00+00:00",
+          "glucose": 210.0
+        },
+        {
+          "timestamp": "2025-08-01T12:30:00+00:00",
+          "glucose": 230.0
+        },
+        {
+          "timestamp": "2025-08-01T13:00:00+00:00",
+          "glucose": 250.0
+        },
+        {
+          "timestamp": "2025-08-01T13:05:00+00:00",
+          "glucose": 245.0
+        },
+        {
+          "timestamp": "2025-08-01T18:15:00+00:00",
+          "glucose": 190.0
+        },
+        {
+          "timestamp": "2025-08-01T18:20:00+00:00",
+          "glucose": 210.0
+        },
+        {
+          "timestamp": "2025-08-01T18:25:00+00:00",
+          "glucose": 230.0
+        },
+        {
+          "timestamp": "2025-08-01T18:30:00+00:00",
+          "glucose": 250.0
+        },
+        {
+          "timestamp": "2025-08-01T19:00:00+00:00",
+          "glucose": 270.0
+        },
+        {
+          "timestamp": "2025-08-01T19:05:00+00:00",
+          "glucose": 265.0
+        },
+        {
+          "timestamp": "2025-08-02T03:35:00+00:00",
+          "glucose": 190.0
+        },
+        {
+          "timestamp": "2025-08-02T03:40:00+00:00",
+          "glucose": 200.0
+        },
+        {
+          "timestamp": "2025-08-02T03:45:00+00:00",
+          "glucose": 210.0
+        },
+        {
+          "timestamp": "2025-08-02T03:50:00+00:00",
+          "glucose": 220.0
+        },
+        {
+          "timestamp": "2025-08-02T07:00:00+00:00",
+          "glucose": 240.0
+        },
+        {
+          "timestamp": "2025-08-02T07:05:00+00:00",
+          "glucose": 250.0
+        },
+        {
+          "timestamp": "2025-08-02T07:10:00+00:00",
+          "glucose": 260.0
+        },
+        {
+          "timestamp": "2025-08-02T07:15:00+00:00",
+          "glucose": 270.0
+        },
+        {
+          "timestamp": "2025-08-02T07:20:00+00:00",
+          "glucose": 280.0
+        },
+        {
+          "timestamp": "2025-08-02T07:25:00+00:00",
+          "glucose": 290.0
+        },
+        {
+          "timestamp": "2025-08-02T07:30:00+00:00",
+          "glucose": 300.0
+        },
+        {
+          "timestamp": "2025-08-02T08:00:00+00:00",
+          "glucose": 310.0
+        },
+        {
+          "timestamp": "2025-08-02T08:05:00+00:00",
+          "glucose": 305.0
+        },
+        {
+          "timestamp": "2025-08-02T12:15:00+00:00",
+          "glucose": 190.0
+        },
+        {
+          "timestamp": "2025-08-02T12:20:00+00:00",
+          "glucose": 210.0
+        },
+        {
+          "timestamp": "2025-08-02T12:25:00+00:00",
+          "glucose": 230.0
+        },
+        {
+          "timestamp": "2025-08-02T12:30:00+00:00",
+          "glucose": 250.0
+        },
+        {
+          "timestamp": "2025-08-02T13:00:00+00:00",
+          "glucose": 270.0
+        },
+        {
+          "timestamp": "2025-08-02T13:05:00+00:00",
+          "glucose": 265.0
+        },
+        {
+          "timestamp": "2025-08-02T18:15:00+00:00",
+          "glucose": 200.0
+        },
+        {
+          "timestamp": "2025-08-02T18:20:00+00:00",
+          "glucose": 220.0
+        },
+        {
+          "timestamp": "2025-08-02T18:25:00+00:00",
+          "glucose": 240.0
+        },
+        {
+          "timestamp": "2025-08-02T18:30:00+00:00",
+          "glucose": 260.0
+        },
+        {
+          "timestamp": "2025-08-02T19:00:00+00:00",
+          "glucose": 280.0
+        },
+        {
+          "timestamp": "2025-08-02T19:05:00+00:00",
+          "glucose": 275.0
+        }
+      ],
+      "postprandial_spikes": [
+        {
+          "start": "2025-08-01T12:00:00+00:00",
+          "end": "2025-08-01T18:15:00+00:00",
+          "delta": 60.0
+        },
+        {
+          "start": "2025-08-02T12:00:00+00:00",
+          "end": "2025-08-02T18:15:00+00:00",
+          "delta": 60.0
+        }
+      ],
+      "dawn_phenomenon": false
+    },
+    "recommendation_context": {
+      "high_cv": true,
+      "low_tir": true,
+      "frequent_hypos": true,
+      "frequent_spikes": false,
+      "dawn_present": false
+    }
+  },
+  "interpretation_text": "The patient\u2019s CGM data demonstrates suboptimal glycemic control, with a mean glucose of 158 mg/dL (GMI 7.09%) and significant glycemic variability (CV 49.7%, SD 78.6 mg/dL). Time in range is low at 44.9%, with excessive time spent both below range (16.5%) and above range (38.6%). Notably, there were 21 hypoglycemic events, all occurring nocturnally, and 49 hyperglycemic events; only 2 postprandial spikes were detected.\n\nAbnormal patterns include frequent nocturnal hypoglycemia and marked glycemic variability. There is no evidence of a dawn phenomenon.\n\nRecommendations: Intensify glucose management to increase time in range and reduce both hypo- and hyperglycemic excursions. Reassess overnight basal insulin dosing to address nocturnal hypoglycemia. Evaluate the patient\u2019s hypoglycemia awareness and carbohydrate intake. Consider strategies to reduce glycemic variability, such as optimizing basal-bolus regimens and meal timing."
+}

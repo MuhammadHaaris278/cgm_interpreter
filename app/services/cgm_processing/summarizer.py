@@ -18,7 +18,7 @@ def generate_summary(readings: List[CGMPoint]) -> Dict[str, Any]:
         "recommendation_context": {
             "high_cv": metrics["cv"] > 36,
             "low_tir": metrics["tir_percent"] < 70,
-            "frequent_hypos": len(patterns["hypoglycemia_events"]) >= 2,
+            "frequent_hypos": len(patterns.get("nocturnal_hypoglycemia_episodes", [])) >= 2,
             "frequent_spikes": len(patterns["postprandial_spikes"]) >= 3,
             "dawn_present": patterns["dawn_phenomenon"]
         }

@@ -1,0 +1,114 @@
+{
+  "interpretation_id": "8125a067-145a-47a3-b1de-9503d28d97f0",
+  "timestamp": "2025-08-06T11:15:48.586525",
+  "patient_id": "1",
+  "provider_id": "1",
+  "editable": true,
+  "finalized": false,
+  "summary": {
+    "metrics": {
+      "mean_glucose": 158.23,
+      "std_glucose": 78.57,
+      "cv": 49.66,
+      "gmi": 7.09,
+      "tir_percent": 44.88,
+      "below_70_percent": 16.54,
+      "below_54_percent": 0.0,
+      "above_180_percent": 38.58,
+      "above_250_percent": 15.75,
+      "tir_count": 57,
+      "below_70_count": 21,
+      "below_54_count": 0,
+      "above_180_count": 49,
+      "above_250_count": 20,
+      "total_points": 127
+    },
+    "patterns": {
+      "hypoglycemia_events": [
+        {
+          "timestamp": "2025-08-01T00:45:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-01T00:50:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-01T00:55:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-01T01:00:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-01T01:05:00+00:00",
+          "glucose": 60.0
+        },
+        {
+          "timestamp": "2025-08-01T01:10:00+00:00",
+          "glucose": 65.0
+        },
+        {
+          "timestamp": "2025-08-01T22:20:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-01T22:25:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-01T22:30:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-01T22:35:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-01T22:40:00+00:00",
+          "glucose": 60.0
+        },
+        {
+          "timestamp": "2025-08-02T00:30:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-02T00:35:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-02T00:40:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-02T00:45:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-02T00:50:00+00:00",
+          "glucose": 60.0
+        },
+        {
+          "timestamp": "2025-08-02T22:30:00+00:00",
+          "glucose": 68.0
+        },
+        {
+          "timestamp": "2025-08-02T22:35:00+00:00",
+          "glucose": 62.0
+        },
+        {
+          "timestamp": "2025-08-02T22:40:00+00:00",
+          "glucose": 58.0
+        },
+        {
+          "timestamp": "2025-08-02T22:45:00+00:00",
+          "glucose": 55.0
+        },
+        {
+          "timestamp": "2025-08-02T22:50:00+00:00",
+          "glucose": 60.0
+        }
+      ],
+      "nocturnal_hypoglycemia_events": [
+        
