@@ -93,10 +93,10 @@ clinical:
 
 ### Environment Variables
 ```ini
-OPENAI_API_KEY=your-production-api-key
+OPENAI_API_KEY=production-api-key
 DATABASE_URL=postgresql://user:pass@localhost:5432/thyra_cgm
 LOG_LEVEL=INFO
-ENCRYPTION_KEY=your-encryption-key
+ENCRYPTION_KEY=encryption-key
 ```
 
 ## API Documentation
@@ -143,7 +143,7 @@ Finalizes interpretation and triggers billing processes.
 ## Deployment
 
 ### Production Requirements
-- **Runtime**: Python 3.11+
+- **Runtime**: Python 3.9+
 - **Memory**: Minimum 2GB RAM
 - **CPU**: 2+ cores recommended
 - **Storage**: 10GB for logs and temporary data
@@ -203,3 +203,4 @@ This software is provided under the terms of the Thyra Health Systems Software L
 ---
 
 **For technical inquiries or integration support, contact the Thyra Health Systems Development Team.**
+
