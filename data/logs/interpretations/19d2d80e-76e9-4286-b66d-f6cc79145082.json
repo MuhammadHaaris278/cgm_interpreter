@@ -1,0 +1,62 @@
+{
+  "interpretation_id": "19d2d80e-76e9-4286-b66d-f6cc79145082",
+  "timestamp": "2025-08-06T09:03:33.250653",
+  "patient_id": "1",
+  "provider_id": "1",
+  "editable": true,
+  "finalized": false,
+  "summary": {
+    "metrics": {
+      "mean_glucose": 114.32,
+      "std_glucose": 21.4,
+      "cv": 18.72,
+      "gmi": 6.04,
+      "tir_percent": 96.53,
+      "below_70_percent": 3.47,
+      "below_54_percent": 0.0,
+      "above_180_percent": 0.0,
+      "above_250_percent": 0.0,
+      "tir_count": 278,
+      "below_70_count": 10,
+      "below_54_count": 0,
+      "above_180_count": 0,
+      "above_250_count": 0,
+      "total_points": 288
+    },
+    "patterns": {
+      "hypoglycemia_events": [
+        {
+          "start": "2025-08-04T21:05:00+00:00",
+          "end": "2025-08-04T21:25:00+00:00",
+          "min_glucose": 65.0,
+          "count": 5
+        },
+        {
+          "start": "2025-08-04T23:00:00+00:00",
+          "end": "2025-08-04T23:15:00+00:00",
+          "min_glucose": 62.0,
+          "count": 4
+        }
+      ],
+      "nocturnal_hypoglycemia_events": [
+        {
+          "start": "2025-08-04T23:00:00+00:00",
+          "end": "2025-08-04T23:15:00+00:00",
+          "min_glucose": 62.0,
+          "count": 4
+        }
+      ],
+      "hyperglycemia_events": [],
+      "dawn_phenomenon": false,
+      "postprandial_spikes": []
+    },
+    "recommendation_context": {
+      "high_cv": false,
+      "low_tir": false,
+      "frequent_hypos": true,
+      "frequent_spikes": false,
+      "dawn_present": false
+    }
+  },
+  "interpretation_text": "The patient demonstrates excellent overall glycemic control, with a mean glucose of 114 mg/dL, GMI of 6.04%, and 96.5% time in range (70\u2013180 mg/dL). Glycemic variability is low (CV 18.7%), and there are no episodes of hyperglycemia or postprandial spikes detected. However, 3.5% of readings are below range, with two hypoglycemia events, including one nocturnal episode.\n\nAbnormal patterns identified include mild hypoglycemia, particularly overnight, without evidence of dawn phenomenon or postprandial excursions.\n\nRecommend evaluating overnight basal insulin dosing to reduce nocturnal hypoglycemia risk. Assess patient\u2019s hypoglycemia awareness and review carbohydrate intake, especially before bedtime. Consider patient education on hypoglycemia prevention and adjust therapy as indicated."
+}

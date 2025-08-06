@@ -1,0 +1,2594 @@
+[
+  {
+    "timestamp": "2025-08-04T00:00:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Up",
+    "trend_rate": 0.73,
+    "status": "ok",
+    "realtimeValue": 117,
+    "smoothedValue": 119
+  },
+  {
+    "timestamp": "2025-08-04T00:05:00Z",
+    "glucose_mg_per_dl": 122,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.63,
+    "status": "ok",
+    "realtimeValue": 120,
+    "smoothedValue": 124
+  },
+  {
+    "timestamp": "2025-08-04T00:10:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.3,
+    "status": "ok",
+    "realtimeValue": 126,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T00:15:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 124
+  },
+  {
+    "timestamp": "2025-08-04T00:20:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "Up",
+    "trend_rate": 0.88,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 123
+  },
+  {
+    "timestamp": "2025-08-04T00:25:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T00:30:00Z",
+    "glucose_mg_per_dl": 128,
+    "trend": "Up",
+    "trend_rate": 1.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T00:35:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.86,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T00:40:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T00:45:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.61,
+    "status": "ok",
+    "realtimeValue": 134,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T00:50:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 129,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T00:55:00Z",
+    "glucose_mg_per_dl": 135,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.72,
+    "status": "ok",
+    "realtimeValue": 137,
+    "smoothedValue": 135
+  },
+  {
+    "timestamp": "2025-08-04T01:00:00Z",
+    "glucose_mg_per_dl": 135,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 134
+  },
+  {
+    "timestamp": "2025-08-04T01:05:00Z",
+    "glucose_mg_per_dl": 135,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 134
+  },
+  {
+    "timestamp": "2025-08-04T01:10:00Z",
+    "glucose_mg_per_dl": 136,
+    "trend": "Up",
+    "trend_rate": 1.62,
+    "status": "ok",
+    "realtimeValue": 137,
+    "smoothedValue": 138
+  },
+  {
+    "timestamp": "2025-08-04T01:15:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "DoubleDown",
+    "trend_rate": 0.77,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T01:20:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Down",
+    "trend_rate": 1.98,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T01:25:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T01:30:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T01:35:00Z",
+    "glucose_mg_per_dl": 129,
+    "trend": "Down",
+    "trend_rate": 1.38,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T01:40:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "Down",
+    "trend_rate": 1.27,
+    "status": "ok",
+    "realtimeValue": 126,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T01:45:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Up",
+    "trend_rate": 1.06,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 133
+  },
+  {
+    "timestamp": "2025-08-04T01:50:00Z",
+    "glucose_mg_per_dl": 129,
+    "trend": "Down",
+    "trend_rate": 1.02,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T01:55:00Z",
+    "glucose_mg_per_dl": 129,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T02:00:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "DoubleDown",
+    "trend_rate": 1.51,
+    "status": "ok",
+    "realtimeValue": 125,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T02:05:00Z",
+    "glucose_mg_per_dl": 122,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.86,
+    "status": "ok",
+    "realtimeValue": 119,
+    "smoothedValue": 122
+  },
+  {
+    "timestamp": "2025-08-04T02:10:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.79,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 126
+  },
+  {
+    "timestamp": "2025-08-04T02:15:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 126
+  },
+  {
+    "timestamp": "2025-08-04T02:20:00Z",
+    "glucose_mg_per_dl": 120,
+    "trend": "Down",
+    "trend_rate": 1.9,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 118
+  },
+  {
+    "timestamp": "2025-08-04T02:25:00Z",
+    "glucose_mg_per_dl": 120,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 117,
+    "smoothedValue": 121
+  },
+  {
+    "timestamp": "2025-08-04T02:30:00Z",
+    "glucose_mg_per_dl": 125,
+    "trend": "Up",
+    "trend_rate": 0.52,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 126
+  },
+  {
+    "timestamp": "2025-08-04T02:35:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "Down",
+    "trend_rate": 1.31,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 123
+  },
+  {
+    "timestamp": "2025-08-04T02:40:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "Up",
+    "trend_rate": 1.21,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T02:45:00Z",
+    "glucose_mg_per_dl": 126,
+    "trend": "DoubleDown",
+    "trend_rate": 0.69,
+    "status": "ok",
+    "realtimeValue": 129,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T02:50:00Z",
+    "glucose_mg_per_dl": 128,
+    "trend": "Up",
+    "trend_rate": 0.99,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T02:55:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.91,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 124
+  },
+  {
+    "timestamp": "2025-08-04T03:00:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.83,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 120
+  },
+  {
+    "timestamp": "2025-08-04T03:05:00Z",
+    "glucose_mg_per_dl": 116,
+    "trend": "Down",
+    "trend_rate": 1.15,
+    "status": "ok",
+    "realtimeValue": 118,
+    "smoothedValue": 114
+  },
+  {
+    "timestamp": "2025-08-04T03:10:00Z",
+    "glucose_mg_per_dl": 114,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.75,
+    "status": "ok",
+    "realtimeValue": 115,
+    "smoothedValue": 116
+  },
+  {
+    "timestamp": "2025-08-04T03:15:00Z",
+    "glucose_mg_per_dl": 118,
+    "trend": "Up",
+    "trend_rate": 1.51,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 116
+  },
+  {
+    "timestamp": "2025-08-04T03:20:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.71,
+    "status": "ok",
+    "realtimeValue": 120,
+    "smoothedValue": 122
+  },
+  {
+    "timestamp": "2025-08-04T03:25:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 124
+  },
+  {
+    "timestamp": "2025-08-04T03:30:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 125,
+    "smoothedValue": 123
+  },
+  {
+    "timestamp": "2025-08-04T03:35:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "Down",
+    "trend_rate": 1.78,
+    "status": "ok",
+    "realtimeValue": 118,
+    "smoothedValue": 121
+  },
+  {
+    "timestamp": "2025-08-04T03:40:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "Up",
+    "trend_rate": 1.83,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 121
+  },
+  {
+    "timestamp": "2025-08-04T03:45:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 124
+  },
+  {
+    "timestamp": "2025-08-04T03:50:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T03:55:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 123,
+    "smoothedValue": 124
+  },
+  {
+    "timestamp": "2025-08-04T04:00:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "DoubleDown",
+    "trend_rate": 1.05,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 117
+  },
+  {
+    "timestamp": "2025-08-04T04:05:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 120,
+    "smoothedValue": 121
+  },
+  {
+    "timestamp": "2025-08-04T04:10:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 117,
+    "smoothedValue": 119
+  },
+  {
+    "timestamp": "2025-08-04T04:15:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 118
+  },
+  {
+    "timestamp": "2025-08-04T04:20:00Z",
+    "glucose_mg_per_dl": 117,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.54,
+    "status": "ok",
+    "realtimeValue": 114,
+    "smoothedValue": 117
+  },
+  {
+    "timestamp": "2025-08-04T04:25:00Z",
+    "glucose_mg_per_dl": 117,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 119,
+    "smoothedValue": 119
+  },
+  {
+    "timestamp": "2025-08-04T04:30:00Z",
+    "glucose_mg_per_dl": 117,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 119,
+    "smoothedValue": 116
+  },
+  {
+    "timestamp": "2025-08-04T04:35:00Z",
+    "glucose_mg_per_dl": 117,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 120,
+    "smoothedValue": 118
+  },
+  {
+    "timestamp": "2025-08-04T04:40:00Z",
+    "glucose_mg_per_dl": 117,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 117,
+    "smoothedValue": 119
+  },
+  {
+    "timestamp": "2025-08-04T04:45:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "Up",
+    "trend_rate": 1.62,
+    "status": "ok",
+    "realtimeValue": 120,
+    "smoothedValue": 122
+  },
+  {
+    "timestamp": "2025-08-04T04:50:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Down",
+    "trend_rate": 1.29,
+    "status": "ok",
+    "realtimeValue": 117,
+    "smoothedValue": 118
+  },
+  {
+    "timestamp": "2025-08-04T04:55:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 118,
+    "smoothedValue": 117
+  },
+  {
+    "timestamp": "2025-08-04T05:00:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 118,
+    "smoothedValue": 117
+  },
+  {
+    "timestamp": "2025-08-04T05:05:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 119,
+    "smoothedValue": 120
+  },
+  {
+    "timestamp": "2025-08-04T05:10:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 118
+  },
+  {
+    "timestamp": "2025-08-04T05:15:00Z",
+    "glucose_mg_per_dl": 118,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.74,
+    "status": "ok",
+    "realtimeValue": 118,
+    "smoothedValue": 119
+  },
+  {
+    "timestamp": "2025-08-04T05:20:00Z",
+    "glucose_mg_per_dl": 118,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 118
+  },
+  {
+    "timestamp": "2025-08-04T05:25:00Z",
+    "glucose_mg_per_dl": 116,
+    "trend": "Down",
+    "trend_rate": 1.1,
+    "status": "ok",
+    "realtimeValue": 114,
+    "smoothedValue": 114
+  },
+  {
+    "timestamp": "2025-08-04T05:30:00Z",
+    "glucose_mg_per_dl": 116,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 114,
+    "smoothedValue": 115
+  },
+  {
+    "timestamp": "2025-08-04T05:35:00Z",
+    "glucose_mg_per_dl": 113,
+    "trend": "Down",
+    "trend_rate": 1.47,
+    "status": "ok",
+    "realtimeValue": 111,
+    "smoothedValue": 113
+  },
+  {
+    "timestamp": "2025-08-04T05:40:00Z",
+    "glucose_mg_per_dl": 111,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.63,
+    "status": "ok",
+    "realtimeValue": 109,
+    "smoothedValue": 113
+  },
+  {
+    "timestamp": "2025-08-04T05:45:00Z",
+    "glucose_mg_per_dl": 114,
+    "trend": "Up",
+    "trend_rate": 0.87,
+    "status": "ok",
+    "realtimeValue": 111,
+    "smoothedValue": 115
+  },
+  {
+    "timestamp": "2025-08-04T05:50:00Z",
+    "glucose_mg_per_dl": 112,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.19,
+    "status": "ok",
+    "realtimeValue": 113,
+    "smoothedValue": 110
+  },
+  {
+    "timestamp": "2025-08-04T05:55:00Z",
+    "glucose_mg_per_dl": 117,
+    "trend": "DoubleUp",
+    "trend_rate": 0.53,
+    "status": "ok",
+    "realtimeValue": 120,
+    "smoothedValue": 115
+  },
+  {
+    "timestamp": "2025-08-04T06:00:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "Up",
+    "trend_rate": 0.94,
+    "status": "ok",
+    "realtimeValue": 118,
+    "smoothedValue": 120
+  },
+  {
+    "timestamp": "2025-08-04T06:05:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 123,
+    "smoothedValue": 120
+  },
+  {
+    "timestamp": "2025-08-04T06:10:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 123,
+    "smoothedValue": 121
+  },
+  {
+    "timestamp": "2025-08-04T06:15:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 120
+  },
+  {
+    "timestamp": "2025-08-04T06:20:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "Up",
+    "trend_rate": 0.95,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T06:25:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 123,
+    "smoothedValue": 122
+  },
+  {
+    "timestamp": "2025-08-04T06:30:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 122
+  },
+  {
+    "timestamp": "2025-08-04T06:35:00Z",
+    "glucose_mg_per_dl": 124,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 125,
+    "smoothedValue": 124
+  },
+  {
+    "timestamp": "2025-08-04T06:40:00Z",
+    "glucose_mg_per_dl": 123,
+    "trend": "Down",
+    "trend_rate": 1.35,
+    "status": "ok",
+    "realtimeValue": 126,
+    "smoothedValue": 121
+  },
+  {
+    "timestamp": "2025-08-04T06:45:00Z",
+    "glucose_mg_per_dl": 120,
+    "trend": "Down",
+    "trend_rate": 1.35,
+    "status": "ok",
+    "realtimeValue": 117,
+    "smoothedValue": 122
+  },
+  {
+    "timestamp": "2025-08-04T06:50:00Z",
+    "glucose_mg_per_dl": 115,
+    "trend": "Down",
+    "trend_rate": 1.88,
+    "status": "ok",
+    "realtimeValue": 116,
+    "smoothedValue": 115
+  },
+  {
+    "timestamp": "2025-08-04T06:55:00Z",
+    "glucose_mg_per_dl": 116,
+    "trend": "Up",
+    "trend_rate": 1.63,
+    "status": "ok",
+    "realtimeValue": 115,
+    "smoothedValue": 117
+  },
+  {
+    "timestamp": "2025-08-04T07:00:00Z",
+    "glucose_mg_per_dl": 116,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 119,
+    "smoothedValue": 116
+  },
+  {
+    "timestamp": "2025-08-04T07:05:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "Up",
+    "trend_rate": 1.28,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 120
+  },
+  {
+    "timestamp": "2025-08-04T07:10:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 120
+  },
+  {
+    "timestamp": "2025-08-04T07:15:00Z",
+    "glucose_mg_per_dl": 118,
+    "trend": "Down",
+    "trend_rate": 1.95,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 117
+  },
+  {
+    "timestamp": "2025-08-04T07:20:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.72,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 118
+  },
+  {
+    "timestamp": "2025-08-04T07:25:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 117
+  },
+  {
+    "timestamp": "2025-08-04T07:30:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 120
+  },
+  {
+    "timestamp": "2025-08-04T07:35:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 116,
+    "smoothedValue": 121
+  },
+  {
+    "timestamp": "2025-08-04T07:40:00Z",
+    "glucose_mg_per_dl": 117,
+    "trend": "Down",
+    "trend_rate": 1.73,
+    "status": "ok",
+    "realtimeValue": 120,
+    "smoothedValue": 119
+  },
+  {
+    "timestamp": "2025-08-04T07:45:00Z",
+    "glucose_mg_per_dl": 117,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 114,
+    "smoothedValue": 117
+  },
+  {
+    "timestamp": "2025-08-04T07:50:00Z",
+    "glucose_mg_per_dl": 120,
+    "trend": "DoubleUp",
+    "trend_rate": 1.84,
+    "status": "ok",
+    "realtimeValue": 120,
+    "smoothedValue": 121
+  },
+  {
+    "timestamp": "2025-08-04T07:55:00Z",
+    "glucose_mg_per_dl": 119,
+    "trend": "DoubleDown",
+    "trend_rate": 1.57,
+    "status": "ok",
+    "realtimeValue": 122,
+    "smoothedValue": 117
+  },
+  {
+    "timestamp": "2025-08-04T08:00:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "DoubleUp",
+    "trend_rate": 1.09,
+    "status": "ok",
+    "realtimeValue": 120,
+    "smoothedValue": 121
+  },
+  {
+    "timestamp": "2025-08-04T08:05:00Z",
+    "glucose_mg_per_dl": 126,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.18,
+    "status": "ok",
+    "realtimeValue": 125,
+    "smoothedValue": 127
+  },
+  {
+    "timestamp": "2025-08-04T08:10:00Z",
+    "glucose_mg_per_dl": 126,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 125,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T08:15:00Z",
+    "glucose_mg_per_dl": 126,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 123,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T08:20:00Z",
+    "glucose_mg_per_dl": 128,
+    "trend": "DoubleUp",
+    "trend_rate": 0.55,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T08:25:00Z",
+    "glucose_mg_per_dl": 133,
+    "trend": "DoubleUp",
+    "trend_rate": 0.91,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T08:30:00Z",
+    "glucose_mg_per_dl": 128,
+    "trend": "DoubleDown",
+    "trend_rate": 0.75,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T08:35:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.01,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T08:40:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Up",
+    "trend_rate": 0.61,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T08:45:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 136
+  },
+  {
+    "timestamp": "2025-08-04T08:50:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 136,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T08:55:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 137,
+    "smoothedValue": 134
+  },
+  {
+    "timestamp": "2025-08-04T09:00:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "DoubleDown",
+    "trend_rate": 1.33,
+    "status": "ok",
+    "realtimeValue": 134,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T09:05:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "Down",
+    "trend_rate": 0.75,
+    "status": "ok",
+    "realtimeValue": 129,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T09:10:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 126
+  },
+  {
+    "timestamp": "2025-08-04T09:15:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 125,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T09:20:00Z",
+    "glucose_mg_per_dl": 128,
+    "trend": "FortyFiveUp",
+    "trend_rate": 2.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T09:25:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Up",
+    "trend_rate": 1.31,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T09:30:00Z",
+    "glucose_mg_per_dl": 136,
+    "trend": "DoubleUp",
+    "trend_rate": 1.83,
+    "status": "ok",
+    "realtimeValue": 136,
+    "smoothedValue": 138
+  },
+  {
+    "timestamp": "2025-08-04T09:35:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Down",
+    "trend_rate": 0.9,
+    "status": "ok",
+    "realtimeValue": 134,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T09:40:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Up",
+    "trend_rate": 1.53,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 135
+  },
+  {
+    "timestamp": "2025-08-04T09:45:00Z",
+    "glucose_mg_per_dl": 138,
+    "trend": "Up",
+    "trend_rate": 1.46,
+    "status": "ok",
+    "realtimeValue": 138,
+    "smoothedValue": 137
+  },
+  {
+    "timestamp": "2025-08-04T09:50:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.62,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 136
+  },
+  {
+    "timestamp": "2025-08-04T09:55:00Z",
+    "glucose_mg_per_dl": 135,
+    "trend": "Up",
+    "trend_rate": 0.71,
+    "status": "ok",
+    "realtimeValue": 136,
+    "smoothedValue": 137
+  },
+  {
+    "timestamp": "2025-08-04T10:00:00Z",
+    "glucose_mg_per_dl": 138,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.99,
+    "status": "ok",
+    "realtimeValue": 138,
+    "smoothedValue": 137
+  },
+  {
+    "timestamp": "2025-08-04T10:05:00Z",
+    "glucose_mg_per_dl": 138,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 136
+  },
+  {
+    "timestamp": "2025-08-04T10:10:00Z",
+    "glucose_mg_per_dl": 142,
+    "trend": "Up",
+    "trend_rate": 1.37,
+    "status": "ok",
+    "realtimeValue": 144,
+    "smoothedValue": 140
+  },
+  {
+    "timestamp": "2025-08-04T10:15:00Z",
+    "glucose_mg_per_dl": 138,
+    "trend": "Down",
+    "trend_rate": 1.5,
+    "status": "ok",
+    "realtimeValue": 138,
+    "smoothedValue": 138
+  },
+  {
+    "timestamp": "2025-08-04T10:20:00Z",
+    "glucose_mg_per_dl": 139,
+    "trend": "Up",
+    "trend_rate": 1.92,
+    "status": "ok",
+    "realtimeValue": 139,
+    "smoothedValue": 137
+  },
+  {
+    "timestamp": "2025-08-04T10:25:00Z",
+    "glucose_mg_per_dl": 139,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 138,
+    "smoothedValue": 140
+  },
+  {
+    "timestamp": "2025-08-04T10:30:00Z",
+    "glucose_mg_per_dl": 139,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 139,
+    "smoothedValue": 139
+  },
+  {
+    "timestamp": "2025-08-04T10:35:00Z",
+    "glucose_mg_per_dl": 139,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 141,
+    "smoothedValue": 140
+  },
+  {
+    "timestamp": "2025-08-04T10:40:00Z",
+    "glucose_mg_per_dl": 137,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.67,
+    "status": "ok",
+    "realtimeValue": 134,
+    "smoothedValue": 135
+  },
+  {
+    "timestamp": "2025-08-04T10:45:00Z",
+    "glucose_mg_per_dl": 137,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 140,
+    "smoothedValue": 138
+  },
+  {
+    "timestamp": "2025-08-04T10:50:00Z",
+    "glucose_mg_per_dl": 135,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.04,
+    "status": "ok",
+    "realtimeValue": 134,
+    "smoothedValue": 134
+  },
+  {
+    "timestamp": "2025-08-04T10:55:00Z",
+    "glucose_mg_per_dl": 136,
+    "trend": "DoubleUp",
+    "trend_rate": 1.98,
+    "status": "ok",
+    "realtimeValue": 138,
+    "smoothedValue": 138
+  },
+  {
+    "timestamp": "2025-08-04T11:00:00Z",
+    "glucose_mg_per_dl": 133,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.25,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 131
+  },
+  {
+    "timestamp": "2025-08-04T11:05:00Z",
+    "glucose_mg_per_dl": 136,
+    "trend": "Up",
+    "trend_rate": 0.75,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 134
+  },
+  {
+    "timestamp": "2025-08-04T11:10:00Z",
+    "glucose_mg_per_dl": 136,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 134,
+    "smoothedValue": 138
+  },
+  {
+    "timestamp": "2025-08-04T11:15:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.07,
+    "status": "ok",
+    "realtimeValue": 134,
+    "smoothedValue": 133
+  },
+  {
+    "timestamp": "2025-08-04T11:20:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 132,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T11:25:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T11:30:00Z",
+    "glucose_mg_per_dl": 132,
+    "trend": "DoubleUp",
+    "trend_rate": 0.68,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T11:35:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Down",
+    "trend_rate": 1.31,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T11:40:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T11:45:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 131
+  },
+  {
+    "timestamp": "2025-08-04T11:50:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T11:55:00Z",
+    "glucose_mg_per_dl": 126,
+    "trend": "Down",
+    "trend_rate": 0.86,
+    "status": "ok",
+    "realtimeValue": 129,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T12:00:00Z",
+    "glucose_mg_per_dl": 126,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 129,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T12:05:00Z",
+    "glucose_mg_per_dl": 126,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 127
+  },
+  {
+    "timestamp": "2025-08-04T12:10:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.96,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T12:15:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T12:20:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 132,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T12:25:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 129,
+    "smoothedValue": 131
+  },
+  {
+    "timestamp": "2025-08-04T12:30:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T12:35:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T12:40:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Up",
+    "trend_rate": 1.89,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 135
+  },
+  {
+    "timestamp": "2025-08-04T12:45:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.97,
+    "status": "ok",
+    "realtimeValue": 132,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T12:50:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T12:55:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T13:00:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T13:05:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T13:10:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T13:15:00Z",
+    "glucose_mg_per_dl": 132,
+    "trend": "Up",
+    "trend_rate": 1.89,
+    "status": "ok",
+    "realtimeValue": 132,
+    "smoothedValue": 134
+  },
+  {
+    "timestamp": "2025-08-04T13:20:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.02,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T13:25:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T13:30:00Z",
+    "glucose_mg_per_dl": 129,
+    "trend": "Down",
+    "trend_rate": 1.71,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 127
+  },
+  {
+    "timestamp": "2025-08-04T13:35:00Z",
+    "glucose_mg_per_dl": 129,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T13:40:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.67,
+    "status": "ok",
+    "realtimeValue": 132,
+    "smoothedValue": 133
+  },
+  {
+    "timestamp": "2025-08-04T13:45:00Z",
+    "glucose_mg_per_dl": 129,
+    "trend": "Down",
+    "trend_rate": 1.5,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T13:50:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Up",
+    "trend_rate": 1.95,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T13:55:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T14:00:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.76,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T14:05:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T14:10:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "DoubleUp",
+    "trend_rate": 1.58,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T14:15:00Z",
+    "glucose_mg_per_dl": 133,
+    "trend": "Up",
+    "trend_rate": 1.52,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 134
+  },
+  {
+    "timestamp": "2025-08-04T14:20:00Z",
+    "glucose_mg_per_dl": 129,
+    "trend": "Down",
+    "trend_rate": 1.84,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T14:25:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.92,
+    "status": "ok",
+    "realtimeValue": 132,
+    "smoothedValue": 135
+  },
+  {
+    "timestamp": "2025-08-04T14:30:00Z",
+    "glucose_mg_per_dl": 132,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.07,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T14:35:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "DoubleDown",
+    "trend_rate": 0.71,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T14:40:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T14:45:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T14:50:00Z",
+    "glucose_mg_per_dl": 127,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 125
+  },
+  {
+    "timestamp": "2025-08-04T14:55:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.1,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 131
+  },
+  {
+    "timestamp": "2025-08-04T15:00:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 131
+  },
+  {
+    "timestamp": "2025-08-04T15:05:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T15:10:00Z",
+    "glucose_mg_per_dl": 130,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T15:15:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Up",
+    "trend_rate": 1.61,
+    "status": "ok",
+    "realtimeValue": 135,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T15:20:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 134,
+    "smoothedValue": 135
+  },
+  {
+    "timestamp": "2025-08-04T15:25:00Z",
+    "glucose_mg_per_dl": 132,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.43,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 131
+  },
+  {
+    "timestamp": "2025-08-04T15:30:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.66,
+    "status": "ok",
+    "realtimeValue": 129,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T15:35:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 132,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T15:40:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T15:45:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 134,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T15:50:00Z",
+    "glucose_mg_per_dl": 131,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 130,
+    "smoothedValue": 129
+  },
+  {
+    "timestamp": "2025-08-04T15:55:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Up",
+    "trend_rate": 0.88,
+    "status": "ok",
+    "realtimeValue": 131,
+    "smoothedValue": 136
+  },
+  {
+    "timestamp": "2025-08-04T16:00:00Z",
+    "glucose_mg_per_dl": 135,
+    "trend": "Up",
+    "trend_rate": 1.82,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 135
+  },
+  {
+    "timestamp": "2025-08-04T16:05:00Z",
+    "glucose_mg_per_dl": 135,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 136,
+    "smoothedValue": 135
+  },
+  {
+    "timestamp": "2025-08-04T16:10:00Z",
+    "glucose_mg_per_dl": 134,
+    "trend": "Down",
+    "trend_rate": 1.84,
+    "status": "ok",
+    "realtimeValue": 133,
+    "smoothedValue": 132
+  },
+  {
+    "timestamp": "2025-08-04T16:15:00Z",
+    "glucose_mg_per_dl": 129,
+    "trend": "Down",
+    "trend_rate": 0.88,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T16:20:00Z",
+    "glucose_mg_per_dl": 129,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 127
+  },
+  {
+    "timestamp": "2025-08-04T16:25:00Z",
+    "glucose_mg_per_dl": 128,
+    "trend": "Down",
+    "trend_rate": 1.34,
+    "status": "ok",
+    "realtimeValue": 129,
+    "smoothedValue": 126
+  },
+  {
+    "timestamp": "2025-08-04T16:30:00Z",
+    "glucose_mg_per_dl": 128,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 126,
+    "smoothedValue": 126
+  },
+  {
+    "timestamp": "2025-08-04T16:35:00Z",
+    "glucose_mg_per_dl": 128,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 127,
+    "smoothedValue": 130
+  },
+  {
+    "timestamp": "2025-08-04T16:40:00Z",
+    "glucose_mg_per_dl": 128,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 128,
+    "smoothedValue": 128
+  },
+  {
+    "timestamp": "2025-08-04T16:45:00Z",
+    "glucose_mg_per_dl": 126,
+    "trend": "Down",
+    "trend_rate": 1.82,
+    "status": "ok",
+    "realtimeValue": 124,
+    "smoothedValue": 124
+  },
+  {
+    "timestamp": "2025-08-04T16:50:00Z",
+    "glucose_mg_per_dl": 121,
+    "trend": "Down",
+    "trend_rate": 0.92,
+    "status": "ok",
+    "realtimeValue": 121,
+    "smoothedValue": 120
+  },
+  {
+    "timestamp": "2025-08-04T16:55:00Z",
+    "glucose_mg_per_dl": 116,
+    "trend": "Down",
+    "trend_rate": 1.92,
+    "status": "ok",
+    "realtimeValue": 119,
+    "smoothedValue": 118
+  },
+  {
+    "timestamp": "2025-08-04T17:00:00Z",
+    "glucose_mg_per_dl": 111,
+    "trend": "DoubleDown",
+    "trend_rate": 1.14,
+    "status": "ok",
+    "realtimeValue": 111,
+    "smoothedValue": 112
+  },
+  {
+    "timestamp": "2025-08-04T17:05:00Z",
+    "glucose_mg_per_dl": 106,
+    "trend": "Down",
+    "trend_rate": 1.98,
+    "status": "ok",
+    "realtimeValue": 109,
+    "smoothedValue": 105
+  },
+  {
+    "timestamp": "2025-08-04T17:10:00Z",
+    "glucose_mg_per_dl": 102,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.77,
+    "status": "ok",
+    "realtimeValue": 104,
+    "smoothedValue": 100
+  },
+  {
+    "timestamp": "2025-08-04T17:15:00Z",
+    "glucose_mg_per_dl": 98,
+    "trend": "DoubleDown",
+    "trend_rate": 0.63,
+    "status": "ok",
+    "realtimeValue": 100,
+    "smoothedValue": 99
+  },
+  {
+    "timestamp": "2025-08-04T17:20:00Z",
+    "glucose_mg_per_dl": 98,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 98,
+    "smoothedValue": 96
+  },
+  {
+    "timestamp": "2025-08-04T17:25:00Z",
+    "glucose_mg_per_dl": 100,
+    "trend": "Up",
+    "trend_rate": 0.79,
+    "status": "ok",
+    "realtimeValue": 100,
+    "smoothedValue": 102
+  },
+  {
+    "timestamp": "2025-08-04T17:30:00Z",
+    "glucose_mg_per_dl": 98,
+    "trend": "DoubleDown",
+    "trend_rate": 0.65,
+    "status": "ok",
+    "realtimeValue": 101,
+    "smoothedValue": 97
+  },
+  {
+    "timestamp": "2025-08-04T17:35:00Z",
+    "glucose_mg_per_dl": 95,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.71,
+    "status": "ok",
+    "realtimeValue": 93,
+    "smoothedValue": 95
+  },
+  {
+    "timestamp": "2025-08-04T17:40:00Z",
+    "glucose_mg_per_dl": 91,
+    "trend": "DoubleDown",
+    "trend_rate": 1.93,
+    "status": "ok",
+    "realtimeValue": 90,
+    "smoothedValue": 89
+  },
+  {
+    "timestamp": "2025-08-04T17:45:00Z",
+    "glucose_mg_per_dl": 91,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 94,
+    "smoothedValue": 93
+  },
+  {
+    "timestamp": "2025-08-04T17:50:00Z",
+    "glucose_mg_per_dl": 94,
+    "trend": "Up",
+    "trend_rate": 1.44,
+    "status": "ok",
+    "realtimeValue": 94,
+    "smoothedValue": 96
+  },
+  {
+    "timestamp": "2025-08-04T17:55:00Z",
+    "glucose_mg_per_dl": 94,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 93,
+    "smoothedValue": 93
+  },
+  {
+    "timestamp": "2025-08-04T18:00:00Z",
+    "glucose_mg_per_dl": 94,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 95,
+    "smoothedValue": 95
+  },
+  {
+    "timestamp": "2025-08-04T18:05:00Z",
+    "glucose_mg_per_dl": 94,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 97,
+    "smoothedValue": 94
+  },
+  {
+    "timestamp": "2025-08-04T18:10:00Z",
+    "glucose_mg_per_dl": 97,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.51,
+    "status": "ok",
+    "realtimeValue": 95,
+    "smoothedValue": 98
+  },
+  {
+    "timestamp": "2025-08-04T18:15:00Z",
+    "glucose_mg_per_dl": 94,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.59,
+    "status": "ok",
+    "realtimeValue": 94,
+    "smoothedValue": 95
+  },
+  {
+    "timestamp": "2025-08-04T18:20:00Z",
+    "glucose_mg_per_dl": 97,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.76,
+    "status": "ok",
+    "realtimeValue": 94,
+    "smoothedValue": 96
+  },
+  {
+    "timestamp": "2025-08-04T18:25:00Z",
+    "glucose_mg_per_dl": 97,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 97,
+    "smoothedValue": 96
+  },
+  {
+    "timestamp": "2025-08-04T18:30:00Z",
+    "glucose_mg_per_dl": 93,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.36,
+    "status": "ok",
+    "realtimeValue": 96,
+    "smoothedValue": 94
+  },
+  {
+    "timestamp": "2025-08-04T18:35:00Z",
+    "glucose_mg_per_dl": 93,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 95,
+    "smoothedValue": 91
+  },
+  {
+    "timestamp": "2025-08-04T18:40:00Z",
+    "glucose_mg_per_dl": 93,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 90,
+    "smoothedValue": 92
+  },
+  {
+    "timestamp": "2025-08-04T18:45:00Z",
+    "glucose_mg_per_dl": 93,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 94,
+    "smoothedValue": 92
+  },
+  {
+    "timestamp": "2025-08-04T18:50:00Z",
+    "glucose_mg_per_dl": 89,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.43,
+    "status": "ok",
+    "realtimeValue": 91,
+    "smoothedValue": 89
+  },
+  {
+    "timestamp": "2025-08-04T18:55:00Z",
+    "glucose_mg_per_dl": 92,
+    "trend": "DoubleUp",
+    "trend_rate": 1.99,
+    "status": "ok",
+    "realtimeValue": 89,
+    "smoothedValue": 94
+  },
+  {
+    "timestamp": "2025-08-04T19:00:00Z",
+    "glucose_mg_per_dl": 96,
+    "trend": "Up",
+    "trend_rate": 0.77,
+    "status": "ok",
+    "realtimeValue": 95,
+    "smoothedValue": 98
+  },
+  {
+    "timestamp": "2025-08-04T19:05:00Z",
+    "glucose_mg_per_dl": 93,
+    "trend": "Down",
+    "trend_rate": 0.76,
+    "status": "ok",
+    "realtimeValue": 90,
+    "smoothedValue": 91
+  },
+  {
+    "timestamp": "2025-08-04T19:10:00Z",
+    "glucose_mg_per_dl": 98,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.86,
+    "status": "ok",
+    "realtimeValue": 96,
+    "smoothedValue": 99
+  },
+  {
+    "timestamp": "2025-08-04T19:15:00Z",
+    "glucose_mg_per_dl": 98,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 97,
+    "smoothedValue": 96
+  },
+  {
+    "timestamp": "2025-08-04T19:20:00Z",
+    "glucose_mg_per_dl": 97,
+    "trend": "Down",
+    "trend_rate": 0.79,
+    "status": "ok",
+    "realtimeValue": 94,
+    "smoothedValue": 97
+  },
+  {
+    "timestamp": "2025-08-04T19:25:00Z",
+    "glucose_mg_per_dl": 97,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 97,
+    "smoothedValue": 96
+  },
+  {
+    "timestamp": "2025-08-04T19:30:00Z",
+    "glucose_mg_per_dl": 97,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 98,
+    "smoothedValue": 95
+  },
+  {
+    "timestamp": "2025-08-04T19:35:00Z",
+    "glucose_mg_per_dl": 97,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 96,
+    "smoothedValue": 98
+  },
+  {
+    "timestamp": "2025-08-04T19:40:00Z",
+    "glucose_mg_per_dl": 97,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 96,
+    "smoothedValue": 95
+  },
+  {
+    "timestamp": "2025-08-04T19:45:00Z",
+    "glucose_mg_per_dl": 95,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.57,
+    "status": "ok",
+    "realtimeValue": 92,
+    "smoothedValue": 97
+  },
+  {
+    "timestamp": "2025-08-04T19:50:00Z",
+    "glucose_mg_per_dl": 94,
+    "trend": "DoubleDown",
+    "trend_rate": 0.8,
+    "status": "ok",
+    "realtimeValue": 93,
+    "smoothedValue": 96
+  },
+  {
+    "timestamp": "2025-08-04T19:55:00Z",
+    "glucose_mg_per_dl": 94,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 97,
+    "smoothedValue": 94
+  },
+  {
+    "timestamp": "2025-08-04T20:00:00Z",
+    "glucose_mg_per_dl": 94,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 92,
+    "smoothedValue": 94
+  },
+  {
+    "timestamp": "2025-08-04T20:05:00Z",
+    "glucose_mg_per_dl": 92,
+    "trend": "Down",
+    "trend_rate": 1.14,
+    "status": "ok",
+    "realtimeValue": 90,
+    "smoothedValue": 93
+  },
+  {
+    "timestamp": "2025-08-04T20:10:00Z",
+    "glucose_mg_per_dl": 92,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 95,
+    "smoothedValue": 94
+  },
+  {
+    "timestamp": "2025-08-04T20:15:00Z",
+    "glucose_mg_per_dl": 87,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.6,
+    "status": "ok",
+    "realtimeValue": 84,
+    "smoothedValue": 88
+  },
+  {
+    "timestamp": "2025-08-04T20:20:00Z",
+    "glucose_mg_per_dl": 89,
+    "trend": "DoubleUp",
+    "trend_rate": 1.81,
+    "status": "ok",
+    "realtimeValue": 88,
+    "smoothedValue": 89
+  },
+  {
+    "timestamp": "2025-08-04T20:25:00Z",
+    "glucose_mg_per_dl": 89,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 92,
+    "smoothedValue": 87
+  },
+  {
+    "timestamp": "2025-08-04T20:30:00Z",
+    "glucose_mg_per_dl": 89,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 87,
+    "smoothedValue": 91
+  },
+  {
+    "timestamp": "2025-08-04T20:35:00Z",
+    "glucose_mg_per_dl": 86,
+    "trend": "Down",
+    "trend_rate": 1.81,
+    "status": "ok",
+    "realtimeValue": 84,
+    "smoothedValue": 85
+  },
+  {
+    "timestamp": "2025-08-04T20:40:00Z",
+    "glucose_mg_per_dl": 86,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 85,
+    "smoothedValue": 87
+  },
+  {
+    "timestamp": "2025-08-04T20:45:00Z",
+    "glucose_mg_per_dl": 82,
+    "trend": "Down",
+    "trend_rate": 1.47,
+    "status": "ok",
+    "realtimeValue": 83,
+    "smoothedValue": 82
+  },
+  {
+    "timestamp": "2025-08-04T20:50:00Z",
+    "glucose_mg_per_dl": 80,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.87,
+    "status": "ok",
+    "realtimeValue": 77,
+    "smoothedValue": 82
+  },
+  {
+    "timestamp": "2025-08-04T20:55:00Z",
+    "glucose_mg_per_dl": 75,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.93,
+    "status": "ok",
+    "realtimeValue": 77,
+    "smoothedValue": 73
+  },
+  {
+    "timestamp": "2025-08-04T21:00:00Z",
+    "glucose_mg_per_dl": 74,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.57,
+    "status": "ok",
+    "realtimeValue": 76,
+    "smoothedValue": 74
+  },
+  {
+    "timestamp": "2025-08-04T21:05:00Z",
+    "glucose_mg_per_dl": 69,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.61,
+    "status": "ok",
+    "realtimeValue": 72,
+    "smoothedValue": 70
+  },
+  {
+    "timestamp": "2025-08-04T21:10:00Z",
+    "glucose_mg_per_dl": 69,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 67,
+    "smoothedValue": 69
+  },
+  {
+    "timestamp": "2025-08-04T21:15:00Z",
+    "glucose_mg_per_dl": 69,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 70,
+    "smoothedValue": 67
+  },
+  {
+    "timestamp": "2025-08-04T21:20:00Z",
+    "glucose_mg_per_dl": 65,
+    "trend": "FortyFiveDown",
+    "trend_rate": 0.65,
+    "status": "ok",
+    "realtimeValue": 62,
+    "smoothedValue": 65
+  },
+  {
+    "timestamp": "2025-08-04T21:25:00Z",
+    "glucose_mg_per_dl": 68,
+    "trend": "Up",
+    "trend_rate": 1.7,
+    "status": "ok",
+    "realtimeValue": 70,
+    "smoothedValue": 66
+  },
+  {
+    "timestamp": "2025-08-04T21:30:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "DoubleUp",
+    "trend_rate": 0.79,
+    "status": "ok",
+    "realtimeValue": 72,
+    "smoothedValue": 71
+  },
+  {
+    "timestamp": "2025-08-04T21:35:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 70,
+    "smoothedValue": 73
+  },
+  {
+    "timestamp": "2025-08-04T21:40:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 72,
+    "smoothedValue": 71
+  },
+  {
+    "timestamp": "2025-08-04T21:45:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 72,
+    "smoothedValue": 72
+  },
+  {
+    "timestamp": "2025-08-04T21:50:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 75,
+    "smoothedValue": 70
+  },
+  {
+    "timestamp": "2025-08-04T21:55:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 72,
+    "smoothedValue": 71
+  },
+  {
+    "timestamp": "2025-08-04T22:00:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 70,
+    "smoothedValue": 74
+  },
+  {
+    "timestamp": "2025-08-04T22:05:00Z",
+    "glucose_mg_per_dl": 70,
+    "trend": "Down",
+    "trend_rate": 1.79,
+    "status": "ok",
+    "realtimeValue": 72,
+    "smoothedValue": 71
+  },
+  {
+    "timestamp": "2025-08-04T22:10:00Z",
+    "glucose_mg_per_dl": 68,
+    "trend": "FortyFiveDown",
+    "trend_rate": 1.79,
+    "status": "ok",
+    "realtimeValue": 66,
+    "smoothedValue": 66
+  },
+  {
+    "timestamp": "2025-08-04T22:15:00Z",
+    "glucose_mg_per_dl": 73,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.97,
+    "status": "ok",
+    "realtimeValue": 70,
+    "smoothedValue": 72
+  },
+  {
+    "timestamp": "2025-08-04T22:20:00Z",
+    "glucose_mg_per_dl": 73,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 71,
+    "smoothedValue": 73
+  },
+  {
+    "timestamp": "2025-08-04T22:25:00Z",
+    "glucose_mg_per_dl": 73,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 72,
+    "smoothedValue": 72
+  },
+  {
+    "timestamp": "2025-08-04T22:30:00Z",
+    "glucose_mg_per_dl": 73,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 76,
+    "smoothedValue": 74
+  },
+  {
+    "timestamp": "2025-08-04T22:35:00Z",
+    "glucose_mg_per_dl": 73,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 76,
+    "smoothedValue": 74
+  },
+  {
+    "timestamp": "2025-08-04T22:40:00Z",
+    "glucose_mg_per_dl": 73,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 74,
+    "smoothedValue": 73
+  },
+  {
+    "timestamp": "2025-08-04T22:45:00Z",
+    "glucose_mg_per_dl": 73,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 75,
+    "smoothedValue": 73
+  },
+  {
+    "timestamp": "2025-08-04T22:50:00Z",
+    "glucose_mg_per_dl": 73,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 74,
+    "smoothedValue": 74
+  },
+  {
+    "timestamp": "2025-08-04T22:55:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Down",
+    "trend_rate": 1.35,
+    "status": "ok",
+    "realtimeValue": 73,
+    "smoothedValue": 74
+  },
+  {
+    "timestamp": "2025-08-04T23:00:00Z",
+    "glucose_mg_per_dl": 67,
+    "trend": "Down",
+    "trend_rate": 1.26,
+    "status": "ok",
+    "realtimeValue": 64,
+    "smoothedValue": 65
+  },
+  {
+    "timestamp": "2025-08-04T23:05:00Z",
+    "glucose_mg_per_dl": 62,
+    "trend": "Down",
+    "trend_rate": 1.39,
+    "status": "ok",
+    "realtimeValue": 61,
+    "smoothedValue": 63
+  },
+  {
+    "timestamp": "2025-08-04T23:10:00Z",
+    "glucose_mg_per_dl": 64,
+    "trend": "FortyFiveUp",
+    "trend_rate": 0.72,
+    "status": "ok",
+    "realtimeValue": 67,
+    "smoothedValue": 65
+  },
+  {
+    "timestamp": "2025-08-04T23:15:00Z",
+    "glucose_mg_per_dl": 67,
+    "trend": "Up",
+    "trend_rate": 1.91,
+    "status": "ok",
+    "realtimeValue": 67,
+    "smoothedValue": 65
+  },
+  {
+    "timestamp": "2025-08-04T23:20:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "FortyFiveUp",
+    "trend_rate": 1.48,
+    "status": "ok",
+    "realtimeValue": 74,
+    "smoothedValue": 73
+  },
+  {
+    "timestamp": "2025-08-04T23:25:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 74,
+    "smoothedValue": 71
+  },
+  {
+    "timestamp": "2025-08-04T23:30:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 70,
+    "smoothedValue": 74
+  },
+  {
+    "timestamp": "2025-08-04T23:35:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 72,
+    "smoothedValue": 72
+  },
+  {
+    "timestamp": "2025-08-04T23:40:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 74,
+    "smoothedValue": 71
+  },
+  {
+    "timestamp": "2025-08-04T23:45:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 71,
+    "smoothedValue": 71
+  },
+  {
+    "timestamp": "2025-08-04T23:50:00Z",
+    "glucose_mg_per_dl": 72,
+    "trend": "Flat",
+    "trend_rate": 0.0,
+    "status": "ok",
+    "realtimeValue": 75,
+    "smoothedValue": 72
+  },
+  {
+    "timestamp": "2025-08-04T23:55:00Z",
+    "glucose_mg_per_dl": 71,
+    "trend": "DoubleDown",
+    "trend_rate": 0.68,
+    "status": "ok",
+    "realtimeValue": 69,
+    "smoothedValue": 73
+  }
+]

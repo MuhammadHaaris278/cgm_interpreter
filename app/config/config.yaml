@@ -1,0 +1,16 @@
+app:
+  name: "CGM Interpretation API"
+  host: "0.0.0.0"
+  port: 8080
+  debug: true
+
+llm:
+  provider: "openai"
+  model: "openai/gpt-4.1"
+  base_url: "https://models.github.ai/inference"
+  api_key_env: "OPENAI_API_KEY"
+
+paths:
+  input_dir: "data/mock_cgm"
+  interpretation_dir: "data/logs/interpretations"
+  billing_log_dir: "data/logs/billing"
