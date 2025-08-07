@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THYRA CGM Interpretation System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1a202c;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-logo {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .nav-subtitle {
+            font-size: 0.875rem;
+            color: #718096;
+            margin-left: 0.5rem;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-user {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            min-height: calc(100vh - 200px);
+        }
+
+        /* Upload Section */
+        .upload-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-icon {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .upload-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+        }
+
+        .form-input {
+            padding: 0.75rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .file-upload {
+            grid-column: 1 / -1;
+            border: 2px dashed #cbd5e0;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .file-upload:hover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .file-upload.dragover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            color: #a0aec0;
+            margin-bottom: 1rem;
+        }
+
+        .upload-text {
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-subtext {
+            color: #a0aec0;
+            font-size: 0.875rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f7fafc;
+            color: #4a5568;
+            border: 2px solid #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            background: #edf2f7;
+            border-color: #cbd5e0;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* Results Section */
+        .results-section {
+            display: none;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #f8fafc, #edf2f7);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        .patterns-section {
+            margin-bottom: 2rem;
+        }
+
+        .patterns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pattern-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+        }
+
+        .pattern-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .pattern-title {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .pattern-count {
+            background: #667eea;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Enhanced Interpretation Section */
+        .interpretation-section {
+            background: linear-gradient(135deg, #f8fafc, #edf2f7);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .interpretation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .interpretation-title-section h3 {
+            font-size: 1.5rem;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .interpretation-subtitle {
+            color: #718096;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ai-badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+        }
+
+        .interpretation-container {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .interpretation-toolbar {
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .interpretation-stats {
+            font-size: 0.8rem;
+            color: #718096;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .word-count {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .interpretation-text {
+            width: 100%;
+            min-height: 400px;
+            padding: 1.5rem;
+            border: none;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #2d3748;
+            background: white;
+            resize: vertical;
+            transition: all 0.2s;
+        }
+
+        .interpretation-text:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .interpretation-text:read-only {
+            background: #f8fafc;
+            color: #4a5568;
+            cursor: default;
+        }
+
+        .interpretation-footer {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 1rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .interpretation-meta {
+            font-size: 0.8rem;
+            color: #718096;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Status indicators */
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-finalized {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(45, 55, 72, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+        }
+
+        .footer-section p, .footer-section li {
+            color: #cbd5e0;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4a5568;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: #a0aec0;
+        }
+
+        /* Loading and animations */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Notification styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            z-index: 1000;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .notification-success {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .notification-error {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+
+        .notification-warning {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .notification-info {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .upload-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .interpretation-text {
+                min-height: 300px;
+                font-size: 1rem;
+            }
+
+            .interpretation-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <div class="nav-logo">T</div>
+                <div>
+                    <div class="nav-title">THYRA Health Systems</div>
+                    <div class="nav-subtitle">CGM Interpretation Module</div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <div class="nav-user">
+                    <i class="fas fa-user-md"></i>
+                    <span>Dr. Sarah Johnson</span>
+                </div>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                    <div class="section-title">CGM Data Interpretation</div>
+                    <div style="color: #718096; font-size: 0.9rem;">Upload continuous glucose monitoring data for AI-powered clinical analysis</div>
+                </div>
+            </div>
+
+            <form id="cgm-form" class="upload-form">
+                <div class="form-group">
+                    <label class="form-label">Patient ID</label>
+                    <input type="text" id="patient-id" class="form-input" placeholder="Enter patient identifier" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Provider ID</label>
+                    <input type="text" id="provider-id" class="form-input" placeholder="Enter provider identifier" required>
+                </div>
+                <div class="file-upload" id="file-upload">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="upload-text">Drop your CGM JSON file here or click to browse</div>
+                    <div class="upload-subtext">Supports Dexcom and custom CGM data formats</div>
+                    <input type="file" id="cgm-file" accept=".json" style="display: none;">
+                </div>
+            </form>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+                <div style="color: #718096; font-size: 0.875rem;">
+                    <i class="fas fa-info-circle"></i>
+                    AI-powered analysis with 92% clinical concordance
+                </div>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <button id="demo-btn" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Load Demo Data
+                    </button>
+                    <button id="analyze-btn" class="btn btn-primary" disabled>
+                        <i class="fas fa-brain"></i>
+                        Generate Interpretation
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-section" class="results-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <div>
+                    <div class="section-title">Clinical Analysis Results</div>
+                    <div style="color: #718096; font-size: 0.9rem;">Comprehensive CGM metrics and pattern analysis</div>
+                </div>
+            </div>
+
+            <!-- Metrics Grid -->
+            <div class="metrics-grid" id="metrics-grid">
+                <!-- Metrics will be populated here -->
+            </div>
+
+            <!-- Patterns Section -->
+            <div class="patterns-section">
+                <h3 style="margin-bottom: 1rem; color: #2d3748;">Detected Patterns</h3>
+                <div class="patterns-grid" id="patterns-grid">
+                    <!-- Patterns will be populated here -->
+                </div>
+            </div>
+
+            <!-- AI Interpretation -->
+            <div class="interpretation-section">
+                <div class="interpretation-header">
+                    <div class="interpretation-title-section">
+                        <h3>AI Clinical Interpretation</h3>
+                        <div class="interpretation-subtitle">
+                            <span class="ai-badge">GPT-4 Enhanced</span>
+                            <span>Generated with clinical expertise validation</span>
+                        </div>
+                    </div>
+                    <div class="status-badge status-pending" id="status-badge">
+                        <i class="fas fa-clock"></i>
+                        Pending Review
+                    </div>
+                </div>
+                
+                <div class="interpretation-container">
+                    <div class="interpretation-toolbar">
+                        <div class="interpretation-stats">
+                            <div class="word-count">
+                                <i class="fas fa-align-left"></i>
+                                <span id="word-count">0 words</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-edit"></i>
+                                <span>Clinical Review Mode</span>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.8rem; color: #718096;">
+                            Last saved: <span id="last-saved">Never</span>
+                        </div>
+                    </div>
+                    
+                    <textarea 
+                        id="interpretation-text" 
+                        class="interpretation-text" 
+                        placeholder="AI-generated clinical interpretation will appear here once analysis is complete. You can edit and refine the interpretation as needed before finalizing the report."
+                    ></textarea>
+                    
+                    <div class="interpretation-footer">
+                        <div class="interpretation-meta">
+                            <i class="fas fa-shield-alt"></i>
+                            HIPAA compliant • Auto-saved every 30 seconds
+                        </div>
+                        <div class="action-buttons">
+                            <button id="save-btn" class="btn btn-secondary">
+                                <i class="fas fa-save"></i>
+                                Save Changes
+                            </button>
+                            <button id="finalize-btn" class="btn btn-primary">
+                                <i class="fas fa-check-circle"></i>
+                                Finalize & Trigger Billing
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>THYRA Health Systems</h3>
+                <p>Advanced AI-powered healthcare solutions for institutional and government medical facilities.</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> support@thyrahealth.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Clinical Compliance</h3>
+                <ul style="list-style: none;">
+                    <li>• HIPAA Compliant</li>
+                    <li>• FDA Class II Compatible</li>
+                    <li>• CPT 95251 Billing Integration</li>
+                    <li>• SOC 2 Type II Certified</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Documentation</h3>
+                <ul style="list-style: none;">
+                    <li>• Clinical Guidelines</li>
+                    <li>• Integration Manual</li>
+                    <li>• API Documentation</li>
+                    <li>• User Training</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 THYRA Health Systems. All rights reserved. | Confidential & Proprietary</p>
+        </div>
+    </footer>
+
+    <script>
+        // Configuration - matches API endpoints structure
+        const API_BASE_URL = '/api'; // Updated to match FastAPI prefix
+        
+        // Global state
+        let currentInterpretationId = null;
+        let currentPatientId = null;
+        let currentProviderId = null;
+        let analysisData = null;
+        let autoSaveInterval = null;
+
+        // DOM elements
+        const fileUpload = document.getElementById('file-upload');
+        const fileInput = document.getElementById('cgm-file');
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const demoBtn = document.getElementById('demo-btn');
+        const resultsSection = document.getElementById('results-section');
+        const patientIdInput = document.getElementById('patient-id');
+        const providerIdInput = document.getElementById('provider-id');
+        const interpretationText = document.getElementById('interpretation-text');
+        const wordCountSpan = document.getElementById('word-count');
+        const lastSavedSpan = document.getElementById('last-saved');
+
+        // File upload handlers
+        fileUpload.addEventListener('click', () => fileInput.click());
+        
+        fileUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUpload.classList.add('dragover');
+        });
+        
+        fileUpload.addEventListener('dragleave', () => {
+            fileUpload.classList.remove('dragover');
+        });
+        
+        fileUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileUpload.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                handleFileSelect();
+            }
+        });
+
+        fileInput.addEventListener('change', handleFileSelect);
+
+        function handleFileSelect() {
+            const file = fileInput.files[0];
+            if (file) {
+                const validation = validateFile(file);
+                if (!validation.valid) {
+                    showNotification(validation.message, 'error');
+                    fileInput.value = '';
+                    return;
+                }
+                
+                const uploadText = fileUpload.querySelector('.upload-text');
+                uploadText.textContent = `Selected: ${file.name}`;
+                checkFormReady();
+            }
+        }
+
+        function validateFile(file) {
+            if (!file) return { valid: false, message: 'No file selected' };
+            
+            if (!file.name.toLowerCase().endsWith('.json')) {
+                return { valid: false, message: 'Please select a JSON file' };
+            }
+            
+            if (file.size > 10 * 1024 * 1024) {
+                return { valid: false, message: 'File too large (max 10MB)' };
+            }
+            
+            return { valid: true };
+        }
+
+        function checkFormReady() {
+            const hasFile = fileInput.files.length > 0;
+            const hasPatient = patientIdInput.value.trim() !== '';
+            const hasProvider = providerIdInput.value.trim() !== '';
+            
+            analyzeBtn.disabled = !(hasFile && hasPatient && hasProvider);
+        }
+
+        patientIdInput.addEventListener('input', checkFormReady);
+        providerIdInput.addEventListener('input', checkFormReady);
+
+        // Word count and auto-save functionality
+        interpretationText.addEventListener('input', () => {
+            updateWordCount();
+            scheduleAutoSave();
+        });
+
+        function updateWordCount() {
+            const text = interpretationText.value.trim();
+            const wordCount = text ? text.split(/\s+/).length : 0;
+            wordCountSpan.textContent = `${wordCount} words`;
+        }
+
+        function scheduleAutoSave() {
+            if (autoSaveInterval) {
+                clearTimeout(autoSaveInterval);
+            }
+            
+            autoSaveInterval = setTimeout(() => {
+                if (currentInterpretationId && interpretationText.value.trim()) {
+                    autoSaveInterpretation();
+                }
+            }, 30000); // Auto-save every 30 seconds
+        }
+
+        async function autoSaveInterpretation() {
+            if (!currentInterpretationId) return;
+            
+            try {
+                const formData = new FormData();
+                formData.append('new_text', interpretationText.value);
+                formData.append('provider_id', currentProviderId);
+
+                await fetch(`${API_BASE_URL}/edit/${currentInterpretationId}`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                lastSavedSpan.textContent = new Date().toLocaleTimeString();
+            } catch (error) {
+                console.warn('Auto-save failed:', error);
+            }
+        }
+
+        // Main analyze function - matches API structure
+        analyzeBtn.addEventListener('click', async () => {
+            currentPatientId = patientIdInput.value.trim();
+            currentProviderId = providerIdInput.value.trim();
+            
+            const formData = new FormData();
+            formData.append('patient_id', currentPatientId);
+            formData.append('provider_id', currentProviderId);
+            formData.append('file', fileInput.files[0]);
+
+            showProgress(analyzeBtn, 'Analyzing...');
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/interpret`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                analysisData = data;
+                currentInterpretationId = data.interpretation_id;
+                
+                displayResults(data);
+                showNotification('Analysis completed successfully!', 'success');
+                
+            } catch (error) {
+                console.error('Analysis failed:', error);
+                showNotification('Analysis failed: ' + error.message, 'error');
+            } finally {
+                hideProgress(analyzeBtn, '<i class="fas fa-brain"></i> Generate Interpretation');
+            }
+        });
+
+        // Demo data functionality
+        demoBtn.addEventListener('click', () => {
+            const demoData = {
+                interpretation_id: "demo-12345",
+                summary: {
+                    metrics: {
+                        tir_percent: 68.5,
+                        mean_glucose: 165.2,
+                        cv: 42.1,
+                        gmi: 7.3,
+                        below_70_percent: 8.2,
+                        above_180_percent: 23.3,
+                        std_glucose: 69.5
+                    },
+                    patterns: {
+                        hypoglycemia_events: [
+                            { timestamp: "2025-08-01T02:15:00Z", glucose: 65 },
+                            { timestamp: "2025-08-02T03:30:00Z", glucose: 58 }
+                        ],
+                        nocturnal_hypoglycemia_episodes: [
+                            { start: "2025-08-01T02:15:00Z", end: "2025-08-01T02:45:00Z", min_glucose: 58, count: 3 }
+                        ],
+                        postprandial_spikes: [
+                            { start: "2025-08-01T12:00:00Z", end: "2025-08-01T13:30:00Z", delta: 85.5 },
+                            { start: "2025-08-01T18:15:00Z", end: "2025-08-01T19:45:00Z", delta: 92.3 }
+                        ],
+                        hyperglycemia_events: [
+                            { timestamp: "2025-08-01T13:30:00Z", glucose: 285 },
+                            { timestamp: "2025-08-02T14:15:00Z", glucose: 310 }
+                        ],
+                        dawn_phenomenon: true
+                    }
+                },
+                interpretation_text: "The 14-day CGM analysis reveals suboptimal glycemic control with a Time in Range of 68.5%, below the recommended target of >70%. The patient demonstrates significant glycemic variability (CV 42.1%) and frequent nocturnal hypoglycemia with 1 documented episode between 2-6 AM.\n\nNotable postprandial excursions are observed with 2 significant spikes >80 mg/dL, suggesting possible carbohydrate miscounting or inadequate bolus timing. Dawn phenomenon is present, contributing to early morning hyperglycemia.\n\nCLINICAL RECOMMENDATIONS:\n1. Review overnight basal rates to address nocturnal hypoglycemia risk\n2. Optimize bolus-to-carb ratios for improved meal coverage\n3. Consider split-dose basal insulin or CGM-integrated pump therapy\n4. Patient education on carbohydrate counting accuracy\n5. Follow-up in 2-3 months with repeat CGM analysis\n\nThis interpretation supports the need for intensive diabetes management adjustments to improve overall glycemic control and reduce hypoglycemia risk."
+            };
+            
+            currentInterpretationId = demoData.interpretation_id;
+            currentPatientId = "DEMO-001";
+            currentProviderId = "DR-JOHNSON-001";
+            
+            // Pre-fill form with demo values
+            patientIdInput.value = currentPatientId;
+            providerIdInput.value = currentProviderId;
+            
+            displayResults(demoData);
+            showNotification('Demo data loaded successfully!', 'info');
+        });
+
+        function displayResults(data) {
+            // Show results section with animation
+            resultsSection.style.display = 'block';
+            resultsSection.classList.add('fade-in');
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Display metrics with proper formatting
+            const metricsGrid = document.getElementById('metrics-grid');
+            const metrics = data.summary.metrics;
+            
+            metricsGrid.innerHTML = `
+                <div class="metric-card">
+                    <div class="metric-value">${metrics.tir_percent}%</div>
+                    <div class="metric-label">Time in Range</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">${metrics.mean_glucose}</div>
+                    <div class="metric-label">Mean Glucose (mg/dL)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">${metrics.cv}%</div>
+                    <div class="metric-label">Coefficient of Variation</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">${metrics.gmi}</div>
+                    <div class="metric-label">GMI</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">${metrics.below_70_percent}%</div>
+                    <div class="metric-label">Time Below Range</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">${metrics.above_180_percent}%</div>
+                    <div class="metric-label">Time Above Range</div>
+                </div>
+            `;
+
+            // Display patterns with better handling of missing data
+            const patternsGrid = document.getElementById('patterns-grid');
+            const patterns = data.summary.patterns;
+            
+            patternsGrid.innerHTML = `
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-title">Hypoglycemic Events</div>
+                        <div class="pattern-count">${patterns.hypoglycemia_events?.length || 0}</div>
+                    </div>
+                    <p style="color: #718096; font-size: 0.875rem;">Episodes below 70 mg/dL detected</p>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-title">Nocturnal Episodes</div>
+                        <div class="pattern-count">${patterns.nocturnal_hypoglycemia_episodes?.length || 0}</div>
+                    </div>
+                    <p style="color: #718096; font-size: 0.875rem;">Nighttime hypoglycemic episodes</p>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-title">Postprandial Spikes</div>
+                        <div class="pattern-count">${patterns.postprandial_spikes?.length || 0}</div>
+                    </div>
+                    <p style="color: #718096; font-size: 0.875rem;">Post-meal glucose elevations detected</p>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-header">
+                        <div class="pattern-title">Dawn Phenomenon</div>
+                        <div class="pattern-count">${patterns.dawn_phenomenon ? 'Yes' : 'No'}</div>
+                    </div>
+                    <p style="color: #718096; font-size: 0.875rem;">Early morning glucose rise pattern</p>
+                </div>
+            `;
+
+            // Display AI interpretation with proper formatting
+            interpretationText.value = data.interpretation_text;
+            updateWordCount();
+        }
+
+        // Save interpretation - matches API structure
+        document.getElementById('save-btn').addEventListener('click', async () => {
+            if (!currentInterpretationId) {
+                showNotification('No interpretation to save', 'warning');
+                return;
+            }
+
+            const newText = interpretationText.value.trim();
+            if (!newText) {
+                showNotification('Interpretation text cannot be empty', 'warning');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('new_text', newText);
+            formData.append('provider_id', currentProviderId);
+
+            const saveBtn = document.getElementById('save-btn');
+            showProgress(saveBtn, 'Saving...');
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/edit/${currentInterpretationId}`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+                }
+
+                await response.json();
+                lastSavedSpan.textContent = new Date().toLocaleTimeString();
+                showNotification('Interpretation saved successfully!', 'success');
+                
+            } catch (error) {
+                console.error('Save failed:', error);
+                showNotification('Save failed: ' + error.message, 'error');
+            } finally {
+                hideProgress(saveBtn, '<i class="fas fa-save"></i> Save Changes');
+            }
+        });
+
+        // Finalize interpretation - matches API structure
+        document.getElementById('finalize-btn').addEventListener('click', async () => {
+            if (!currentInterpretationId) {
+                showNotification('No interpretation to finalize', 'warning');
+                return;
+            }
+
+            const interpretation = interpretationText.value.trim();
+            if (!interpretation) {
+                showNotification('Please add interpretation text before finalizing', 'warning');
+                return;
+            }
+
+            // Enhanced confirmation dialog
+            const confirmed = await showConfirmDialog(
+                'Finalize Interpretation',
+                'Are you sure you want to finalize this interpretation? This action will:',
+                [
+                    'Lock the interpretation from further edits',
+                    'Trigger CPT 95251 billing (if ≥3 days of data)',
+                    'Generate audit trail entry',
+                    'Send to EHR system'
+                ]
+            );
+
+            if (!confirmed) return;
+
+            const formData = new FormData();
+            formData.append('patient_id', currentPatientId);
+            formData.append('provider_id', currentProviderId);
+            formData.append('duration_days', '14'); // Default assumption - could be calculated from data
+
+            const finalizeBtn = document.getElementById('finalize-btn');
+            showProgress(finalizeBtn, 'Finalizing...');
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/finalize/${currentInterpretationId}`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                // Update UI to reflect finalized status
+                updateToFinalizedState();
+                
+                const billingMessage = result.billing_id ? 
+                    'CPT 95251 billing has been triggered.' : 
+                    'No billing triggered due to short monitoring duration.';
+                    
+                showNotification(`${result.message} ${billingMessage}`, 'success');
+                
+            } catch (error) {
+                console.error('Finalization failed:', error);
+                showNotification('Finalization failed: ' + error.message, 'error');
+            } finally {
+                hideProgress(finalizeBtn, '<i class="fas fa-check-circle"></i> Finalize & Trigger Billing');
+            }
+        });
+
+        function updateToFinalizedState() {
+            const statusBadge = document.getElementById('status-badge');
+            statusBadge.innerHTML = '<i class="fas fa-check-circle"></i> Finalized';
+            statusBadge.className = 'status-badge status-finalized';
+            
+            interpretationText.readOnly = true;
+            interpretationText.style.background = '#f8fafc';
+            interpretationText.style.color = '#4a5568';
+            
+            document.getElementById('save-btn').disabled = true;
+            document.getElementById('finalize-btn').disabled = true;
+            
+            // Clear auto-save interval
+            if (autoSaveInterval) {
+                clearTimeout(autoSaveInterval);
+            }
+        }
+
+        // Utility functions
+        function showProgress(element, text) {
+            element.innerHTML = `<div class="loading"></div> ${text}`;
+            element.disabled = true;
+        }
+
+        function hideProgress(element, originalHTML) {
+            element.innerHTML = originalHTML;
+            element.disabled = false;
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            
+            const iconMap = {
+                success: 'check-circle',
+                error: 'exclamation-triangle',
+                warning: 'exclamation-circle',
+                info: 'info-circle'
+            };
+            
+            notification.innerHTML = `
+                <i class="fas fa-${iconMap[type]}"></i>
+                <span>${message}</span>
+            `;
+            
+            notification.style.animation = 'slideIn 0.3s ease-out';
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+
+        function showConfirmDialog(title, message, bulletPoints) {
+            return new Promise((resolve) => {
+                const overlay = document.createElement('div');
+                overlay.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1001;
+                `;
+                
+                const bulletList = bulletPoints.map(point => `<li>${point}</li>`).join('');
+                
+                overlay.innerHTML = `
+                    <div style="background: white; padding: 2rem; border-radius: 12px; max-width: 500px; margin: 1rem;">
+                        <h3 style="margin-bottom: 1rem; color: #2d3748;">${title}</h3>
+                        <p style="margin-bottom: 1.5rem; color: #4a5568;">${message}</p>
+                        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; color: #4a5568;">
+                            ${bulletList}
+                        </ul>
+                        <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                            <button id="dialog-cancel" class="btn btn-secondary">Cancel</button>
+                            <button id="dialog-confirm" class="btn btn-primary">Confirm</button>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(overlay);
+                
+                document.getElementById('dialog-cancel').addEventListener('click', () => {
+                    overlay.remove();
+                    resolve(false);
+                });
+                
+                document.getElementById('dialog-confirm').addEventListener('click', () => {
+                    overlay.remove();
+                    resolve(true);
+                });
+            });
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Ctrl/Cmd + S to save interpretation
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                if (currentInterpretationId && !document.getElementById('save-btn').disabled) {
+                    document.getElementById('save-btn').click();
+                }
+            }
+            
+            // Ctrl/Cmd + Enter to finalize
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                e.preventDefault();
+                if (currentInterpretationId && !document.getElementById('finalize-btn').disabled) {
+                    document.getElementById('finalize-btn').click();
+                }
+            }
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateWordCount();
+            console.log('THYRA CGM Interpretation System initialized');
+            showNotification('System ready for CGM analysis', 'info');
+        });
+
+    </script>
+</body>
+</html>
