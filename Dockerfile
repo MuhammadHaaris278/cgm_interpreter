@@ -1,34 +1,16 @@
-# Use official Python slim image
-FROM python:3.12-slim
+FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
 
-# Install OS dependencies for Python and Rust builds
-RUN apt-get update && \
-    apt-get install -y build-essential curl git pkg-config libssl-dev && \
-    rm -rf /var/lib/apt/lists/*
+# Copy project files
+COPY . /app
 
-# Install Rust for maturin
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Configure Rust to use writable directories inside /app
-ENV PATH="/root/.cargo/bin:${PATH}"
-ENV CARGO_HOME=/app/.cargo
-ENV RUSTUP_HOME=/app/.rustup
+# Expose port 7860 for Hugging Face Spaces
+EXPOSE 7860
 
-# Copy only requirements first to leverage Docker caching
-COPY requirements.txt .
-
-# Upgrade pip and install Python dependencies
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-# Copy the rest of the app, including FastAPI code and static frontend
-COPY . .
-
-# Expose the port Render will assign
-EXPOSE 8080
-
-# Run FastAPI on Render's dynamic port
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "${PORT}"]
+# Run FastAPI app with uvicorn, binding to port 7860
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
